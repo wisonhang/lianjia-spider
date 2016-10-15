@@ -19,7 +19,6 @@ sns.set_style('darkgrid')
 mpl.rcParams['font.sans-serif'] = ['SimHei'] #指定默认字体  
 mpl.rcParams['axes.unicode_minus'] = False 
 sns.set_context("talk")
-tls.set_credentials_file(username='wisonhang', api_key='dvx4ihskow')
 
 def fangjia_plot(db='sh-chengjiao.db',sql="select * from chengjiao",group='district',ytime=201400):
     con=sqlite3.connect(db)
@@ -201,4 +200,14 @@ def snsvio(by='区域',group='闸北',key=2,data=None,style='',col_wap=3,title='
     .fig.subplots_adjust(top=.9,wspace=.15,hspace=.15,bottom=.1,right=0.95,left=0.1))
     return(g)
 
-    
+ if __name__=="__main__":    
+        db='hz-chengjiao.db'
+        sql="select * from chengjiao"
+        pp,data=fangjia_plot(db,sql,group='district',ytime=201500)
+        fig=sbplot(pp,col=3,title='杭州',fontsize=15)
+        snsplot(by='区域',data=data,col_wap=3,style='lm',xlim=[0,200],ylim=[0,1000],font_scale=1.5)
+        plt.show()
+        snsplot(by='区域',data=data,col_wap=3,style='Facet',xlim=[0,200],ylim=[0,1000],font_scale=1.5)
+        plt.show()
+        snsvio(by='区域',data=data,col_wap=3,font_scale=1.5)
+        plt.show()
