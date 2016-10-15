@@ -17,9 +17,9 @@ headers={
 regionsb=['天河','越秀','荔湾','海珠','番禺','白云','黄埔','从化','增城','花都','萝岗','南沙']
 
 xiaoqulink="http://gz.lianjia.com/xiaoqu/rs"
-xiaoqulink1="http://gz.lianjia.com/xiaoqu/pg%srs%s/" 
+xiaoqulink_page="http://gz.lianjia.com/xiaoqu/pg%srs%s/" 
 chengjiaolink="http://gz.lianjia.com/chengjiao/rs"
-chengjiaolink1="http://gz.lianjia.com/chengjiao/pg%srs%s/"
+chengjiaolink_page="http://gz.lianjia.com/chengjiao/pg%srs%s/"
 
     
 
