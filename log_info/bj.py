@@ -30,6 +30,6 @@ headers={
 regionsb=[u"东城",u"西城",u"朝阳",u"海淀",u"丰台",u"石景山","通州",u"昌平",u"大兴",u"亦庄开发区",u"顺义",u"房山",u"门头沟",u"平谷",u"怀柔",u"密云",u"延庆",u"燕郊"]
 
 xiaoqulink="http://bj.lianjia.com/xiaoqu/rs"
-xiaoqulink1="http://bj.lianjia.com/xiaoqu/pg%srs%s/" 
+xiaoqulink_page="http://bj.lianjia.com/xiaoqu/pg%srs%s/" 
 chengjiaolink="http://bj.lianjia.com/chengjiao/rs"
-chengjiaolink1="http://bj.lianjia.com/chengjiao/pg%srs%s/"
+chengjiaolink_page="http://bj.lianjia.com/chengjiao/pg%srs%s/"
