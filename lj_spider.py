@@ -58,9 +58,9 @@ regionsb=["东城","西城","朝阳","海淀","丰台","石景山","通州","昌
 "亦庄开发区","顺义","房山","门头沟","平谷","怀柔","密云","延庆","燕郊"]
 
 xiaoqulink="http://bj.lianjia.com/xiaoqu/rs"
-xiaoqulink1="http://bj.lianjia.com/xiaoqu/pg%srs%s/" 
+xiaoqulink_page="http://bj.lianjia.com/xiaoqu/pg%srs%s/" 
 chengjiaolink="http://bj.lianjia.com/chengjiao/rs"
-chengjiaolink1="http://bj.lianjia.com/chengjiao/pg%srs%s/"
+chengjiaolink_page="http://bj.lianjia.com/chengjiao/pg%srs%s/"
 '''
 ####################################################
 lock = threading.Lock()
@@ -184,7 +184,7 @@ def xiaoqu_spider(db_xq,url_page="http://bj.lianjia.com/xiaoqu/"):
         command=gen_xiaoqu_insert_command(info_dict)
         db_xq.execute(command,1)
 
-def do_xiaoqu_spider(db_xq,region="朝阳",base_url=xiaoqulink,page_url=xiaoqulink1):
+def do_xiaoqu_spider(db_xq,region="朝阳",base_url=xiaoqulink,url_page=xiaoqulink_page):
     """
     爬取大区域中的所有小区信息
     """
@@ -201,7 +201,7 @@ def do_xiaoqu_spider(db_xq,region="朝阳",base_url=xiaoqulink,page_url=xiaoquli
     else:
         threads=[]
         for i in range(total_pages):
-            url_page=page_url%(i+1,region)
+            url_page=url_page%(i+1,region)
         #print(url_page)
             t=threading.Thread(target=xiaoqu_spider,args=(db_xq,url_page))
             threads.append(t)
@@ -230,7 +230,7 @@ def gen_chengjiao_insert_command(info_dict):
     command=(r"insert into chengjiao values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",t)
     return command
 
-def chengjiao_spider(db_cj,db_xq,area,page,url=chengjiaolink1):
+def chengjiao_spider(db_cj,db_xq,area,page,url=chengjiaolink_page):
     """
     爬取页面链接中的成交记录 url="http://xx.lianjia.com/chengjiao/pg%srs%s/" 
     """
