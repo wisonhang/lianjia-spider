@@ -30,6 +30,6 @@ regionsb=['西湖','下城','江干','拱墅','上城','滨江','余杭','萧山
 
 
 xiaoqulink="http://hz.lianjia.com/xiaoqu/rs"
-xiaoqulink1="http://hz.lianjia.com/xiaoqu/pg%srs%s/" 
+xiaoqulink_page="http://hz.lianjia.com/xiaoqu/pg%srs%s/" 
 chengjiaolink="http://hz.lianjia.com/chengjiao/rs"
-chengjiaolink1="http://hz.lianjia.com/chengjiao/pg%srs%s/"
+chengjiaolink_page="http://hz.lianjia.com/chengjiao/pg%srs%s/"
