@@ -1,2 +1,3 @@
 # lianjia-spider
-download the transaction data or second-hand house
+download the transaction data of second-hand house 
+
