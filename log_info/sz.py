@@ -18,6 +18,6 @@ headers={
 #深圳地区
 regionsb=['罗湖','福田','南山','盐田','宝安','龙岗','龙华新区','光明新区','坪山新区','大鹏新区']
 xiaoqulink="http://sz.lianjia.com/xiaoqu/rs"
-xiaoqulink1="http://sz.lianjia.com/xiaoqu/pg%srs%s/" 
+xiaoqulink_page="http://sz.lianjia.com/xiaoqu/pg%srs%s/" 
 chengjiaolink="http://sz.lianjia.com/chengjiao/rs"
-chengjiaolink1="http://sz.lianjia.com/chengjiao/pg%srs%s/"
+chengjiaolink_page="http://sz.lianjia.com/chengjiao/pg%srs%s/"
